@@ -1,0 +1,53 @@
+.label{
+    width: 80%;
+    margin-left: 20%;
+}
+
+.labelAux{
+    margin: 10px;
+}
+
+.labelAux2{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.container{
+    margin-top: 20px;
+}
+.btnAux{
+    margin-top: 10px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.aux{
+    margin-left: 10%;
+    width: 100%;
+}
+
+.largo{
+    width: 50%;
+    margin-left: 25%;
+  }
+  
+.label{
+    width: 80%;
+    margin-left: 20%;
+  }
+
+.labelAux{
+    margin: 10px;
+  }
+
+  .btn{
+    background: #62C6CA;
+    border-color: transparent;
+    color: black;
+  
+  }
+  
+  .btn:hover{
+    background: #FAB04A;
+  }
+  

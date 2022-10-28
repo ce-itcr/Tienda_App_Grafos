@@ -1,34 +1,32 @@
 <app-nav-bar></app-nav-bar>
 
 
-<form class="row g-2">
-    <div class="col-auto">
-      <input type="text" class="form-control" id="" placeholder="Buscar Cliente">
+<div class="container">
+  <form class="row">
+    <div class="col">
+      <input type="text" class="form-control label" id="" placeholder="Buscar Cliente">
     </div>
-    <div class="col-auto">
+    <div class="col-3">
       <button type="submit" class="btn btn-primary mb-3">Aceptar</button>
     </div>
+  </form>
 
+  <h5 class="labelAux"> Detalle de sus compras:</h5>
+  <div class="container">
+    <table class="table table-dark table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Nombre del cliente</th>
+            <th scope="col">Producto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Galaxy s10</th>
+            <td>200</td>
 
-
-</form>
-
-
-<h3>Clientes y productos comun</h3>
-<div class="container">
-  <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Nombres del cliente</th>
-          <th scope="col">Nombres del producto</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Juan</th>
-          <th scope="row">Galaxy s10</th>
-
-      </tbody>
+        </tbody>
     </table>
 </div>
 
+</div>
