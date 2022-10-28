@@ -1,0 +1,35 @@
+.container{
+    margin-top: 50px;
+    width: 80%;
+}
+
+.aux{
+    margin-top: 5px;
+    margin-left: 200px;
+}
+
+.btn{
+    width: 200px;
+    background: #62C6CA;
+    margin-top: 1%;
+    margin-left: 10%;
+    border-color: transparent;
+    color: black;
+}
+
+.btn:hover {
+    background: #FAB04A;
+  }
+
+
+
+.form-control{
+    width: 500px;
+    margin-left: 200px; 
+}
+
+.btnF{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 30px;
+}
