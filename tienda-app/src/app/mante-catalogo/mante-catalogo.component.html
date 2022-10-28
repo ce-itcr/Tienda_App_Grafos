@@ -1,1 +1,113 @@
-<p>mante-catalogo works!</p>
+<app-nav-bar></app-nav-bar>
+
+<div class="container">
+    <button class="btn  tamano"  data-bs-toggle="modal" data-bs-target="#agregarProducto" >Agregar un producto</button>
+
+    <div class="row" >
+        <div class="col">
+          <div class="card" >
+            <div class="card-body">
+                <div>
+                    <label>ID</label>
+                </div>
+                <div>
+                    <label>Nombre</label>
+                </div>
+                <div>
+                    <label>Marca</label>
+                </div>
+                <div>
+                    <label>Precio</label>
+                </div>
+            </div>
+            <div class="card-footer">
+            <button class="btn  botones" data-bs-toggle="modal"  data-bs-target="#editarProducto">Editar</button>
+            <button class="btn  botones" data-bs-toggle="modal"  data-bs-target="#eliminarProducto">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div class="modal fade" id="agregarProducto" tabindex="-1" aria-labelledby="agregarProducto" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="agregarProducto">Agregar Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+        <label>ID:</label>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" required="" >
+            </div>
+
+        <label>Nombre:</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" required="">
+            </div>
+        <label>Marca:</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" required="" >
+            </div>
+        <label>Precio:</label>
+            <div class="input-group mb-3">
+                <input type="number" class="form-control" required="" >
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editarProducto" tabindex="-1" aria-labelledby="editarProducto" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editarProducto">Editar Producto: ID</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+        <label>Nombre:</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" required="">
+            </div>
+        <label>Marca:</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" required="" >
+            </div>
+        <label>Precio:</label>
+            <div class="input-group mb-3">
+                <input type="number" class="form-control" required="" >
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="eliminarProducto" tabindex="-1" aria-labelledby="eliminarProducto" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eliminarProducto">Eliminar Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Relamente desea eliminar el producto : NUMERO ID
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>

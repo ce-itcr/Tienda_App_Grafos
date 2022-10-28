@@ -1,1 +1,104 @@
-<p>mante-clientes works!</p>
+<app-nav-bar></app-nav-bar>
+
+<div class="container">
+    <button class="btn  tamano"  data-bs-toggle="modal" data-bs-target="#agregarCliente" >Agregar un cliente</button>
+
+    <div class="row" >
+        <div class="col">
+          <div class="card" >
+            <img src="https://eco-legal.com/wp-content/uploads/2018/09/default-profile.png"
+                 class="card-img-top" width="50px" height="120px">
+            <div class="card-body">
+                <div>
+                    <label>ID</label>
+                </div>
+                <div>
+                    <label>Nombre</label>
+                </div>
+                <div>
+                    <label>Apellido</label>
+                </div>
+            </div>
+            <div class="card-footer">
+            <button class="btn  botones" data-bs-toggle="modal"  data-bs-target="#editarCliente">Editar</button>
+            <button class="btn  botones" data-bs-toggle="modal"  data-bs-target="#eliminarCliente">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div class="modal fade" id="agregarCliente" tabindex="-1" aria-labelledby="agregarCliente" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="agregarCliente">Agregar Dispositivo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+        <label>ID:</label>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" required="" >
+            </div>
+
+          <label>Nombre:</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" required="">
+            </div>
+          <label>Apellido:</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" required="" >
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editarCliente" tabindex="-1" aria-labelledby="editarCliente" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editarCliente">Editar Cliente: ID</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <label>Nombre:</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" required="">
+            </div>
+          <label>Apellido:</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" required="" >
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="eliminarCliente" tabindex="-1" aria-labelledby="eliminarCliente" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eliminarCliente">Eliminar Cliente</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Relamente desea eliminar a este cliente : NUMERO ID
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
