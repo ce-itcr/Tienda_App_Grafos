@@ -14,3 +14,14 @@
 .container{
     margin-top: 20px;
   }
+
+  .btn{
+    background: #62C6CA;
+    border-color: transparent;
+    color: black;
+  
+}
+
+.btn:hover{
+    background: #FAB04A;
+}

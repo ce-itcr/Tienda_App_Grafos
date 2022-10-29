@@ -1,0 +1,15 @@
+.btn{
+    background: #62C6CA;
+    border-color: transparent;
+    color: black;
+  
+}
+
+.navbar{
+    background: #62C6CA;
+    border-color: transparent;
+    color: black; 
+}
+.btn:hover{
+    background: #FAB04A;
+}
