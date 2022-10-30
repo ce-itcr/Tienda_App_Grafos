@@ -29,11 +29,7 @@ export class ClientesProductoComunComponent implements OnInit {
   }
 
   cargarListaClientes():void{
-    this.producto.productName = name
-    this.service.clienteProductos(this.producto).subscribe(lista => {
-      this.ListaClientes = lista;
-      console.log(this.ListaClientes);
-    })
+    console.log(this.producto)
   }
 
 }
