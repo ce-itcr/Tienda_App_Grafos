@@ -21,8 +21,10 @@ export class BusquedaClienteComponent implements OnInit {
   }
 
   obtenerCliente(): void{
+    this.arregloDatos = this.texto.split(" ")
     this.buscarCliente.clientLastName = this.arregloDatos[0]
     this.buscarCliente.clientName = this.arregloDatos[1]
+    console.log(this.buscarCliente)
   }
 
   cargarHistorialCliente():void{
