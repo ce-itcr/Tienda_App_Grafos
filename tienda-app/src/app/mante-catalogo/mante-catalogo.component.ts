@@ -16,6 +16,10 @@ export class ManteCatalogoComponent implements OnInit {
   productoAcutal: Producto = new Producto
 
   ngOnInit(): void {
+    this.service.obtenerListaProductos().subscribe(lista => {
+      this.listaProductos = lista;
+      console.log(this.listaProductos);
+    });
   }
 
   public obtenerInformacionItem(producto: Producto): void {

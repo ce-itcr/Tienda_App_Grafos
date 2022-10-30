@@ -52,6 +52,8 @@ export class GeneralesService {
     return this.http.post(this.Url + 'product/delete', producto, { responseType: 'text' });
   }
 
-
+  public obtenerListaProductos() {
+    return this.http.get<Producto[]>(this.Url + 'product/get');
+  }
 
 }
