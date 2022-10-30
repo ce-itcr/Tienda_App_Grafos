@@ -10,7 +10,7 @@ import { DatosExcel } from '../Clases/DatosExcel';
   providedIn: 'root'
 })
 export class GeneralesService {
-  Url = 'https://localhost:44341/api/';
+  Url = 'https://localhost:44338/api/';
   private valores = new BehaviorSubject('');
   public valoresActuales = this.valores.asObservable();
 
@@ -18,6 +18,7 @@ export class GeneralesService {
 
 
   public subirLosDatos(datosExcel: DatosExcel) {
-    return this.http.post(this.Url + 'DispositivoModelo', datosExcel, { responseType: 'text' });
+    return this.http.post(this.Url + 'data/store', datosExcel, { responseType: 'text' });
   }
+
 }
