@@ -53,8 +53,9 @@
   }
   .card{
     height: 320px;
-    width: 200px;
-    margin-bottom: 50px;
+    width: 180px;
+    margin-bottom: 25px;
+    margin-top: 25px;
   }
   
   .card2{

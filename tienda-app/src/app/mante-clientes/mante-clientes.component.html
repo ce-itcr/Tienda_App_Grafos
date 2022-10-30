@@ -10,13 +10,13 @@
                  class="card-img-top" width="50px" height="120px">
             <div class="card-body">
                 <div>
-                    <label>ID: {{item.id}}</label>
+                    <label>ID: {{item.clientId}}</label>
                 </div>
                 <div>
-                    <label>Nombre{{item.clientName}}</label>
+                    <label>Nombre: {{item.clientName}}</label>
                 </div>
                 <div>
-                    <label>Apellido{{item.clientLastName}}</label>
+                    <label>Apellido: {{item.clientLastName}}</label>
                 </div>
             </div>
             <div class="card-footer">
@@ -59,7 +59,7 @@
     <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="editarCliente">Editar Cliente: {{clienteAcutal.id}}</h5>
+          <h5 class="modal-title" id="editarCliente">Editar Cliente: {{clienteAcutal.clientId}}</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -89,7 +89,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Relamente desea eliminar a este cliente : {{clienteAcutal.id}}
+          Relamente desea eliminar a este cliente : {{clienteAcutal.clientId}}
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="eliminarCliente(clienteAcutal)">Aceptar</button>

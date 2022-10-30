@@ -2,7 +2,7 @@
  * Clase para modelar al cliente
  */
  export class Cliente {
-    id: any
+    clientId: any
     clientName: any
     clientLastName: any;
   }

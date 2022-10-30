@@ -53,7 +53,7 @@ export class GeneralesService {
   }
 
   public obtenerListaProductos() {
-    return this.http.get<Producto[]>(this.Url + 'product/get');
+    return this.http.get<Producto[]>(this.Url + 'products/get');
   }
 
 }
