@@ -9,6 +9,7 @@ import { Producto } from '../Clases/Producto';
 import { TopProductos } from '../Clases/TopProductos';
 import { TopMarcas } from '../Clases/TopMarcas';
 import { TopClientes } from '../Clases/TopClientes';
+import { BusquedaCliente } from '../Clases/BusquedaCliente';
 
 
 @Injectable({
@@ -68,6 +69,10 @@ export class GeneralesService {
 
   public obtenerTopClientes(){
     return this.http.get<TopClientes[]>(this.Url + 'client/top');
+  }
+  
+  public historialCliente(busquedaCliente: BusquedaCliente){
+    return this.http.post<TopProductos[]>(this.Url + '/client/find', busquedaCliente);;
   }
 
 
