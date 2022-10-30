@@ -13,10 +13,10 @@
                     <label>ID: {{item.id}}</label>
                 </div>
                 <div>
-                    <label>Nombre{{item.first_name}}</label>
+                    <label>Nombre{{item.clientName}}</label>
                 </div>
                 <div>
-                    <label>Apellido{{item.last_name}}</label>
+                    <label>Apellido{{item.clientLastName}}</label>
                 </div>
             </div>
             <div class="card-footer">
@@ -40,11 +40,11 @@
 
           <label>Nombre:</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" required=""  name="nombre" #nombre="ngModel" [(ngModel)]="cliente.first_name">
+                <input type="text" class="form-control" required=""  name="nombre" #nombre="ngModel" [(ngModel)]="cliente.clientName">
             </div>
           <label>Apellido:</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" required="" apellido="nombre" #apellidp="ngModel" [(ngModel)]="cliente.last_name">
+                <input type="text" class="form-control" required="" name="apeliddo" #apellido="ngModel" [(ngModel)]="cliente.clientLastName">
             </div>
         </div>
         <div class="modal-footer">
@@ -66,11 +66,11 @@
 
           <label>Nombre:</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" required="" #nombre="ngModel" [(ngModel)]="clienteAcutal.first_name">
+                <input type="text" class="form-control" required="" #nombre="ngModel" [(ngModel)]="clienteAcutal.clientName">
             </div>
           <label>Apellido:</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" required=""  #apellidp="ngModel" [(ngModel)]="clienteAcutal.last_name">
+                <input type="text" class="form-control" required=""  #apellidp="ngModel" [(ngModel)]="clienteAcutal.clientLastName">
             </div>
         </div>
         <div class="modal-footer">

@@ -17,6 +17,10 @@ export class ManteClientesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public print(){
+    console.log(this.cliente);
+  }
+
   public crearNuevoCliente(cliente: Cliente): void {
     console.log(cliente);
     this.service.crearCliente(cliente).subscribe(respuesta => {
