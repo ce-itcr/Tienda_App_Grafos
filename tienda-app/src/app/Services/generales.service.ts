@@ -5,6 +5,7 @@ import { Data } from '@angular/router';
 import { DatosExcel } from '../Clases/DatosExcel';
 import { Cliente } from '../Clases/Cliente';
 import { clientesComun } from '../Clases/ClientesComun';
+import { Producto } from '../Clases/Producto';
 
 
 
@@ -39,6 +40,17 @@ export class GeneralesService {
     return this.http.get<Cliente[]>(this.Url + 'client/get');
   }
 
+  public crearProducto(producto: Producto){
+    return this.http.post(this.Url + 'product/create', producto, { responseType: 'text' });
+  }
+
+  public editarProducto(producto: Producto){
+    return this.http.post(this.Url + 'product/update', producto, { responseType: 'text' });
+  }
+
+  public eliminarProducto(producto: Producto){
+    return this.http.post(this.Url + 'product/delete', producto, { responseType: 'text' });
+  }
 
 
 
