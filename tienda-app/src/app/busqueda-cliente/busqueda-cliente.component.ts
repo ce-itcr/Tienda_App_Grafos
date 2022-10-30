@@ -12,8 +12,6 @@ export class BusquedaClienteComponent implements OnInit {
 
 
   buscarCliente: BusquedaCliente = new BusquedaCliente
-  texto: any
-  arregloDatos: string[] = []
   datos: TopProductos[] = []  
   constructor(private service: GeneralesService) { }
 

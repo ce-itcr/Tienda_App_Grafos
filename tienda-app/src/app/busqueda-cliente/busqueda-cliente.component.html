@@ -5,10 +5,10 @@
 <div class="container">
   <form class="row">
     <div class="col">
-      <input type="text" class="form-control label" id="" placeholder="Nombre del Cliente" #nombre="ngModel" [(ngModel)]="buscarCliente.clientName">
+      <input type="text" class="form-control label" id="" placeholder="Nombre del Cliente" name="nombre" #nombre="ngModel" [(ngModel)]="buscarCliente.clientName">
     </div>
     <div class="col">
-      <input type="text" class="form-control" id="" placeholder="Apellido del Cliente" #nombre="ngModel" [(ngModel)]="buscarCliente.clientLastName">
+      <input type="text" class="form-control" id="" placeholder="Apellido del Cliente" name="lastname"#nombre="ngModel" [(ngModel)]="buscarCliente.clientLastName">
     </div>
     <div class="col-3">
       <button type="submit" class="btn btn-primary mb-3" (click)="cargarHistorialCliente()">Aceptar</button>

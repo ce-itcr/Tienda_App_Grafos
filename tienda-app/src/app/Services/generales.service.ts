@@ -72,9 +72,7 @@ export class GeneralesService {
   }
   
   public historialCliente(busquedaCliente: BusquedaCliente){
-    return this.http.post<TopProductos[]>(this.Url + '/client/find', busquedaCliente);;
+    return this.http.post<TopProductos[]>(this.Url + 'client/find', busquedaCliente);
   }
-
-
 
 }
