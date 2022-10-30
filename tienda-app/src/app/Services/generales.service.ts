@@ -36,7 +36,7 @@ export class GeneralesService {
   }
 
   public obtenerListaCliente() {
-    return this.http.get<Cliente[]>(this.Url + 'DispositivoModelo');
+    return this.http.get<Cliente[]>(this.Url + 'client/get');
   }
 
 

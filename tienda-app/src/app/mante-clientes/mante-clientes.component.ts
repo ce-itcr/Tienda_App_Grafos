@@ -15,6 +15,10 @@ export class ManteClientesComponent implements OnInit {
   constructor(private service: GeneralesService) { }
 
   ngOnInit(): void {
+    this.service.obtenerListaCliente().subscribe(lista => {
+      this.listaClientes = lista;
+      console.log(this.listaClientes);
+    });
   }
 
   public print(){
