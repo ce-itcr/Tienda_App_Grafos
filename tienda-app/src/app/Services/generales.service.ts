@@ -76,6 +76,6 @@ export class GeneralesService {
   }
 
   public clienteProductos(producto: Producto){
-    return this.http.post<Cliente[]>(this.Url + 'client/t/common/products', producto);
+    return this.http.post<Cliente[]>(this.Url + 'client/common/products', producto);
   }
 }

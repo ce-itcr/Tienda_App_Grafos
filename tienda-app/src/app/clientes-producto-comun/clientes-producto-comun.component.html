@@ -18,7 +18,7 @@
         <div class="col">
           <h4 class="largo">Seleccionar algun producto:</h4>
 
-          <select class="form-select largo" id="validationCustom04" name="6" required #product="ngModel" [(ngModel)]="producto.productName">
+          <select class="form-select largo" id="validationCustom04" name="6" required="" #product="ngModel" [(ngModel)]="producto.productName">
             <optgroup label="">
               <option *ngFor="let item of datos">{{item.productName}}</option>
             </optgroup>
