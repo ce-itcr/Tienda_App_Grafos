@@ -75,4 +75,7 @@ export class GeneralesService {
     return this.http.post<TopProductos[]>(this.Url + 'client/find', busquedaCliente);
   }
 
+  public clienteProductos(producto: Producto){
+    return this.http.post<Cliente[]>(this.Url + 'client/t/common/products', producto);
+  }
 }
