@@ -20,19 +20,11 @@ export class BusquedaClienteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  obtenerCliente(): void{
-    this.arregloDatos = this.texto.split(" ")
-    this.buscarCliente.clientLastName = this.arregloDatos[0]
-    this.buscarCliente.clientName = this.arregloDatos[1]
-    console.log(this.buscarCliente)
-  }
-
   cargarHistorialCliente():void{
-    this.obtenerCliente()
     this.service.historialCliente(this.buscarCliente).subscribe(lista => {
       this.datos = lista;
       console.log(this.datos);
-    });
+    })
   }
 
 
