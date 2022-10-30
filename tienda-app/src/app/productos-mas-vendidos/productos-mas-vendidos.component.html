@@ -3,16 +3,15 @@
 <div class="container">
     <table class="table table-dark table-striped table-hover">
         <thead>
-          <tr>
+          <tr >
             <th scope="col">Producto</th>
             <th scope="col">Unidades vendidas</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">Galaxy s10</th>
-            <td>200</td>
-
+          <tr *ngFor="let item of topProductos">
+            <th scope="row">{{item.productName}}</th>
+            <td>{{item.units}}</td>
         </tbody>
       </table>
 </div>

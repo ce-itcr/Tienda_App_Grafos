@@ -6,7 +6,9 @@ import { DatosExcel } from '../Clases/DatosExcel';
 import { Cliente } from '../Clases/Cliente';
 import { clientesComun } from '../Clases/ClientesComun';
 import { Producto } from '../Clases/Producto';
-
+import { TopProductos } from '../Clases/TopProductos';
+import { TopMarcas } from '../Clases/TopMarcas';
+import { TopClientes } from '../Clases/TopClientes';
 
 
 @Injectable({
@@ -55,5 +57,19 @@ export class GeneralesService {
   public obtenerListaProductos() {
     return this.http.get<Producto[]>(this.Url + 'products/get');
   }
+
+  public obtenerTopProductos(){
+    return this.http.get<TopProductos[]>(this.Url + 'products/top');
+  }
+
+  public obtenerTopMarcas(){
+    return this.http.get<TopMarcas[]>(this.Url + 'brand/top');
+  }
+
+  public obtenerTopClientes(){
+    return this.http.get<TopClientes[]>(this.Url + 'brand/top');
+  }
+
+
 
 }

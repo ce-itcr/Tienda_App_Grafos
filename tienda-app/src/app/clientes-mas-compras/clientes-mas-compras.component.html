@@ -10,9 +10,9 @@
           </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Juan</td>
-            <td>200</td>
+        <tr *ngFor="let item of topClientes">
+            <td>{{item.clientName}}</td>
+            <td>{{item.units}}</td>
         </tr>        
 
         </tbody>

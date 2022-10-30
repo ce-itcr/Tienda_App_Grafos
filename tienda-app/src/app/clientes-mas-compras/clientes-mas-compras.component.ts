@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TopClientes } from '../Clases/TopClientes';
+import { GeneralesService } from '../Services/generales.service';
 
 @Component({
   selector: 'app-clientes-mas-compras',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientesMasComprasComponent implements OnInit {
 
-  constructor() { }
+  topClientes: TopClientes[] = []
+
+  constructor(private service: GeneralesService) { }
 
   ngOnInit(): void {
+    this.service.obtenerTopClientes().subscribe(lista => {
+      this.topClientes = lista;
+      console.log(this.topClientes);
+    });
   }
-
 }

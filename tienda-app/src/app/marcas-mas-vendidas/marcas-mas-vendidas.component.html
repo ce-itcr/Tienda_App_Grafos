@@ -11,10 +11,10 @@
           </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Samsumg</td>
-            <td>Korea del sur</td>
-            <td>200</td>
+        <tr *ngFor="let item of topMarcas">
+            <td>{{item.brandName}}</td>
+            <td>{{item.country}}</td>
+            <td>{{item.units}}</td>
         </tr>        
 
         </tbody>

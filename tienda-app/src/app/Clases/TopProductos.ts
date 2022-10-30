@@ -1,4 +1,4 @@
 export class TopProductos {
-    nombre: string | undefined;
-    unidades: string | undefined;
+    productName: any;
+    units: any;
 }
