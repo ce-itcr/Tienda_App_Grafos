@@ -13,9 +13,8 @@ export class ClientesProductoComunComponent implements OnInit {
 
   buscarCliente: BusquedaCliente = new BusquedaCliente
   datos: TopProductos[] = []
-  producto: Producto = new Producto;
   ListaClientes: Cliente[] = []
-
+  newProducto: Producto = new Producto
   constructor(private service: GeneralesService) { }
 
   ngOnInit(): void {
@@ -29,7 +28,7 @@ export class ClientesProductoComunComponent implements OnInit {
   }
 
   cargarListaClientes():void{
-    console.log(this.producto)
+    console.log(this.newProducto)
   }
 
 }
