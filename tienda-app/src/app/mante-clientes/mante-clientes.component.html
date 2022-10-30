@@ -4,24 +4,24 @@
     <button class="btn  tamano"  data-bs-toggle="modal" data-bs-target="#agregarCliente" >Agregar un cliente</button>
 
     <div class="row" >
-        <div class="col">
+        <div class="col"  *ngFor="let item of listaClientes">
           <div class="card" >
             <img src="https://eco-legal.com/wp-content/uploads/2018/09/default-profile.png"
                  class="card-img-top" width="50px" height="120px">
             <div class="card-body">
                 <div>
-                    <label>ID</label>
+                    <label>ID: {{item.id}}</label>
                 </div>
                 <div>
-                    <label>Nombre</label>
+                    <label>Nombre{{item.first_name}}</label>
                 </div>
                 <div>
-                    <label>Apellido</label>
+                    <label>Apellido{{item.last_name}}</label>
                 </div>
             </div>
             <div class="card-footer">
-            <button class="btn  botones" data-bs-toggle="modal"  data-bs-target="#editarCliente">Editar</button>
-            <button class="btn  botones" data-bs-toggle="modal"  data-bs-target="#eliminarCliente">Eliminar</button>
+            <button class="btn  botones" data-bs-toggle="modal"  data-bs-target="#editarCliente"  (click)="obtenerInformacionItem(item)">Editar</button>
+            <button class="btn  botones" data-bs-toggle="modal"  data-bs-target="#eliminarCliente" (click)="obtenerInformacionItem(item)">Eliminar</button>
             </div>
           </div>
         </div>
@@ -33,28 +33,23 @@
     <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="agregarCliente">Agregar Dispositivo</h5>
+          <h5 class="modal-title" id="agregarCliente">Agregar Cliente</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
 
-        <label>ID:</label>
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" required="" >
-            </div>
-
           <label>Nombre:</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" required="">
+                <input type="text" class="form-control" required=""  name="nombre" #nombre="ngModel" [(ngModel)]="cliente.first_name">
             </div>
           <label>Apellido:</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" required="" >
+                <input type="text" class="form-control" required="" apellido="nombre" #apellidp="ngModel" [(ngModel)]="cliente.last_name">
             </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Aceptar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal"  (click)="crearNuevoCliente(cliente)">Aceptar</button>
         </div>
       </div>
     </div>
@@ -64,23 +59,23 @@
     <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="editarCliente">Editar Cliente: ID</h5>
+          <h5 class="modal-title" id="editarCliente">Editar Cliente: {{clienteAcutal.id}}</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
 
           <label>Nombre:</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" required="">
+                <input type="text" class="form-control" required="" #nombre="ngModel" [(ngModel)]="clienteAcutal.first_name">
             </div>
           <label>Apellido:</label>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" required="" >
+                <input type="text" class="form-control" required=""  #apellidp="ngModel" [(ngModel)]="clienteAcutal.last_name">
             </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Aceptar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="editarCliente(clienteAcutal)">Aceptar</button>
         </div>
       </div>
     </div>
@@ -90,14 +85,14 @@
     <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="eliminarCliente">Eliminar Cliente</h5>
+          <h5 class="modal-title" id="eliminarCliente">Eliminar Cliente </h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Relamente desea eliminar a este cliente : NUMERO ID
+          Relamente desea eliminar a este cliente : {{clienteAcutal.id}}
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Aceptar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="eliminarCliente(clienteAcutal)">Aceptar</button>
         </div>
       </div>
     </div>
