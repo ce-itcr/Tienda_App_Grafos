@@ -67,7 +67,7 @@ export class GeneralesService {
   }
 
   public obtenerTopClientes(){
-    return this.http.get<TopClientes[]>(this.Url + 'brand/top');
+    return this.http.get<TopClientes[]>(this.Url + 'client/top');
   }
 
 
