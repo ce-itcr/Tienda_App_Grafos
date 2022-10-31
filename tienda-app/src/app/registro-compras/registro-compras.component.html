@@ -2,33 +2,34 @@
 
 <div class="container">
     <form class="row">
-        <div class="col">
-          <input type="text" class="form-control label" id="" placeholder="Buscar Cliente">
-        </div>
-        <div class="col-3">
-          <button type="submit" class="btn btn-primary mb-3">Buscar</button>
-        </div>
+      <div class="col">
+        <h4 class="largo">Selecione comprador:</h4>
+          <select class="form-select largo" id="validationCustom04" name="nombre" #nombre="ngModel" [(ngModel)]="cliente.clientId">
+            <optgroup label="">
+              <option *ngFor="let itemAux of listaClientes">{{itemAux.clientName}} {{itemAux.clientLastName}}</option>
+            </optgroup>
+           </select>
+      </div>
     </form>
-
     <div class="row" >
-        <div class="col">
-          <div class="card" >
-            <div class="card-body">
-                <div>
-                    <label>ID</label>
-                </div>
-                <div>
-                    <label>Nombre</label>
-                </div>
-                <div>
-                    <label>Marca</label>
-                </div>
-                <div>
-                    <label>Precio</label>
-                </div>
-            </div>
+      <div class="col" *ngFor="let item of listaProductos">
+        <div class="card" >
+          <div class="card-body">
+              <div>
+                  <label>ID: {{item.productId}}</label>
+              </div>
+              <div>
+                  <label>Nombre: {{item.productName}}</label>
+              </div>
+              <div>
+                  <label>Marca: {{item.productBrand}}</label>
+              </div>
+              <div>
+                  <label>Precio: {{item.productPrice}}</label>
+              </div>
+          </div>
             <div class="card-footer">
-            <button class="btn  botones" data-bs-toggle="modal"  data-bs-target="#comprarProducto">Comprar Porducto</button>
+            <button class="btn  botones" data-bs-toggle="modal"  data-bs-target="#comprarProducto" (click)="obtenerInformacionItem(item)">Comprar Porducto</button>
             </div>
           </div>
         </div>
@@ -46,17 +47,17 @@
         <div class="modal-body">
         <label>Cantidad:</label>
             <div class="input-group mb-3">
-                <input type="number" class="form-control" required="" >
+                <input type="number" class="form-control" required="" name="cantida" #nombre="ngModel" [(ngModel)]="compra.quantity">
             </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar comprar</button>
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" >Agregar al carritto</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="AgregarListaCompra">Agregar al carritto</button>
         </div>
       </div>
     </div>
 </div>
 
 <div class="">
-    <button type="submit" class="btn btn-danger btnAux">Finalizar la compra</button>
+    <button type="submit" class="btn btn-danger btnAux" (click)="FinalizarCompra()">Finalizar la compra</button>
   </div>

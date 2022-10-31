@@ -10,6 +10,7 @@ import { TopProductos } from '../Clases/TopProductos';
 import { TopMarcas } from '../Clases/TopMarcas';
 import { TopClientes } from '../Clases/TopClientes';
 import { BusquedaCliente } from '../Clases/BusquedaCliente';
+import { Compra } from '../Clases/Compra';
 
 @Injectable({
   providedIn: 'root'
@@ -54,6 +55,10 @@ export class GeneralesService {
     return this.http.post(this.Url + 'product/delete', producto, { responseType: 'text' });
   }
 
+  public relizarCompra(listaCompra: Compra[]){
+    return this.http.post(this.Url + 'buyer/add', listaCompra, { responseType: 'text' });
+  }
+
   public obtenerListaProductos() {
     return this.http.get<Producto[]>(this.Url + 'products/get');
   }
@@ -81,4 +86,6 @@ export class GeneralesService {
   public obtenerClientesProductoComun(cliente: Cliente){
     return this.http.post<clientesComun[]>(this.Url + 'client/common/purchase', cliente);
   }
+
+
 }
