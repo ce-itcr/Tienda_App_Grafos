@@ -11,7 +11,6 @@ import { TopMarcas } from '../Clases/TopMarcas';
 import { TopClientes } from '../Clases/TopClientes';
 import { BusquedaCliente } from '../Clases/BusquedaCliente';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -77,5 +76,9 @@ export class GeneralesService {
 
   public clienteProductos(producto: Producto){
     return this.http.post<Cliente[]>(this.Url + 'client/common/products', producto);
+  }
+
+  public obtenerClientesProductoComun(cliente: Cliente){
+    return this.http.post<clientesComun[]>(this.Url + 'client/common/purchase', cliente);
   }
 }
