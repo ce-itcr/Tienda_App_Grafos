@@ -40,7 +40,7 @@ export class RegistroComprasComponent implements OnInit {
   public AgregarListaCompra(){
     this.compra.clientId = this.cliente.clientId
     this.compra.idProducto = this.productoAcutal.productId
-    this.listaCompra.concat(this.compra)
+    this.listaCompra.push(this.compra)
   }
 
   public FinalizarCompra(){
