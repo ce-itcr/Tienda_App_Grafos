@@ -41,6 +41,9 @@ export class RegistroComprasComponent implements OnInit {
     this.compra.clientId = this.cliente.clientId
     this.compra.productId = this.productoAcutal.productId
     this.listaCompra.push(this.compra)
+    this.compra.clientId = ''
+    this.compra.productId = '' 
+    this.compra.quantity = '' 
   }
 
   public FinalizarCompra(){
