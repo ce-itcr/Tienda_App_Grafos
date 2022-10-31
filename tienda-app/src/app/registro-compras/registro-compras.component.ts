@@ -16,6 +16,7 @@ export class RegistroComprasComponent implements OnInit {
   listaProductos: Producto[] = []
   productoAcutal: Producto = new Producto
   compra: Compra = new Compra
+  compraActual: Compra = new Compra
   listaCompra: Compra[] = []
 
   constructor(private service: GeneralesService) { }
@@ -41,9 +42,6 @@ export class RegistroComprasComponent implements OnInit {
     this.compra.clientId = this.cliente.clientId
     this.compra.productId = this.productoAcutal.productId
     this.listaCompra.push(this.compra)
-    this.compra.clientId = ''
-    this.compra.productId = '' 
-    this.compra.quantity = '' 
   }
 
   public FinalizarCompra(){
