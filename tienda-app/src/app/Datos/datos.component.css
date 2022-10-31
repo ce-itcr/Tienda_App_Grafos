@@ -16,15 +16,12 @@
     border-color: transparent;
     color: black;
 }
-
 .btn:hover {
     background: #FAB04A;
   }
 
-
-
 .form-control{
-    width: 900px;
+    width: 800px;
     margin-left: 200px; 
 }
 
