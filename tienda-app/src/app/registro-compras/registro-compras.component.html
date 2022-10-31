@@ -2,14 +2,19 @@
 
 <div class="container">
     <form class="row">
-      <div class="col">
-        <h4 class="largo">Selecione comprador:</h4>
-          <select class="form-select largo" id="validationCustom04" name="nombre" #nombre="ngModel" [(ngModel)]="cliente.clientId">
-            <optgroup label="">
-              <option *ngFor="let itemAux of listaClientes">{{itemAux.clientName}} {{itemAux.clientLastName}}</option>
-            </optgroup>
-           </select>
-      </div>
+        <div class="col-3">
+          <input type="text" class="form-control " id="" placeholder="ID del cliente" name="nombre" #nombre="ngModel" [(ngModel)]="cliente.clientId">
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control " id="" placeholder="Nombre del Cliente" name="nombre" #nombre="ngModel" [(ngModel)]="cliente.clientName">
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control " id="" placeholder="Apellido del Cliente" name="lastname"#nombre="ngModel" [(ngModel)]="cliente.clientLastName">
+        </div>
+        <div class="col-3">
+          <button type="submit" class="btn" (click)="FinalizarCompra()">Agregar cliente</button>        
+        </div>
+
     </form>
     <div class="row" >
       <div class="col" *ngFor="let item of listaProductos">
@@ -42,6 +47,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="editarProducto">Agregar la cantidad de productos deseados</h5>
+          <h5 class="modal-title" id="editarProducto">Porducto a comprar {{productoAcutal.productName}}</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
