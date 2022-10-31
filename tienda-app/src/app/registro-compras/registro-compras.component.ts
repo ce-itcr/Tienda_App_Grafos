@@ -53,6 +53,7 @@ export class RegistroComprasComponent implements OnInit {
         alert('Compra realizada con exito');
         }
     });
+    this.listaCompra = []
   }
 
 }
