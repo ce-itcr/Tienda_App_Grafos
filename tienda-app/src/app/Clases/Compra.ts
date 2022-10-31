@@ -3,6 +3,6 @@
  */
  export class Compra {
     clientId: any;
-    idProducto: any;
+    productId: any;
     quantity: any;
   }
