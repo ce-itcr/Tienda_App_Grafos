@@ -28,7 +28,14 @@ export class ClientesProductoComunComponent implements OnInit {
   }
 
   cargarListaClientes():void{
-    console.log(this.newProducto)
+    //alert("bus");
+    this.service.clienteProductos(this.newProducto).subscribe(lista => {
+      this.ListaClientes = lista;
+      console.log(this.ListaClientes);
+    })
   }
 
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+  }
 }
